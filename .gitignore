@@ -1,0 +1,11 @@
+audioset_16k
+fma_16k
+generated_samples
+generated_augmented_features
+microwakeword
+mit_rirs
+negative_datasets
+piper-sample-generator
+microWakeWord
+training_parameters.yaml
+trained_models
