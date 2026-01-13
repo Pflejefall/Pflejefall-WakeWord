@@ -9,3 +9,5 @@ piper-sample-generator
 microWakeWord
 training_parameters.yaml
 trained_models
+pflejefall.tflite
+pflejefall.json

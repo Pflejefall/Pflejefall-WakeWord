@@ -7,8 +7,11 @@
 # stuck for several minutes! Additionally, it is very slow compared to training
 # on a local GPU.
 
-import os
-os.environ['XLA_FLAGS'] = '--xla_gpu_cuda_data_dir=/usr/lib/nvidia-cuda-toolkit'
+# Disable GPU usage
+export CUDA_VISIBLE_DEVICES=""
+
+export TF_GPU_ALLOCATOR=cuda_malloc_async
+export TF_GPU_MAX_ALLOC_SIZE=536870912  # 512MB
 
 python -m microwakeword.model_train_eval \
     --training_config='training_parameters.yaml' \
@@ -23,7 +26,7 @@ python -m microwakeword.model_train_eval \
     mixednet \
     --pointwise_filters "64,64,64,64" \
     --repeat_in_block  "1, 1, 1, 1" \
-    --mixconv_kernel_sizes '[5], [7,11], [9,15], [23]' \
+    --mixconv_kernel_sizes "[3], [3,5], [3,5], [5]" \
     --residual_connection "0,0,0,0" \
     --first_conv_filters 32 \
     --first_conv_kernel_size 5 \
