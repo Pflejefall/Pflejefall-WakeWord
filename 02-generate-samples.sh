@@ -1,6 +1,6 @@
 python3 \
     ./piper-sample-generator/generate_samples.py \
-    'pfleyefall?' \
+    'pfleyefall' \
     --model piper_voices/de_DE-thorsten-medium.onnx \
     --max-samples 1000 \
     --batch-size 10 \

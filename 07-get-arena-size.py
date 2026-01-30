@@ -19,4 +19,4 @@ def calculate_arena_size(model_path):
     print(f"Geschätzte Mindestgröße: {total_size} Bytes")
     print(f"Empfohlene 'tensor_arena_size' für JSON: {recommended_arena}")
 
-calculate_arena_size("pflejefall.tflite")
+calculate_arena_size("trained_models/wakeword/tflite_stream_state_internal_quant/stream_state_internal_quant.tflite")
